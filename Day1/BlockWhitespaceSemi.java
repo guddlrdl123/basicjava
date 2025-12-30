@@ -1,3 +1,5 @@
+package Day1;
+
 public class BlockWhitespaceSemi {
     public static void main(String[] args) {
         System.out.println("세미콜론, 블럭, 공백에 대해서");

@@ -1,3 +1,5 @@
+package Day1;
+
 /**
  * - document 생성용 주석
  * - javadoc 명령으로 API 문서를 자동 생성시킬 때 사용.

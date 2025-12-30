@@ -1,3 +1,5 @@
+package Day1;
+
 public class FloatTypeExample {
     public static void main(String[] args) {
         float f = 1.1f; // why? 1.1 리터럴은 데이터 타입이 double. 1.1 -> 1.1f
