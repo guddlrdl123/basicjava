@@ -19,5 +19,13 @@ public class IfEx1 {
         }
         // 출력
         System.out.println("시험이 종료 되었습니다.");
+
+        // 위 코드를 if ~ else로 변경.
+        if (score >= 60) {
+            System.out.println("합격입니다.");
+        } else {
+            System.out.println("불합격입니다.");
+        }
+        System.out.println("시험이 종료 되었습니다.");
     }
 }
