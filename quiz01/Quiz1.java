@@ -1,0 +1,19 @@
+package quiz01;
+
+import java.util.Scanner;
+
+public class Quiz1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+
+        System.out.println((a + b) % 3 == 0);
+
+        sc.close();
+    }
+}
