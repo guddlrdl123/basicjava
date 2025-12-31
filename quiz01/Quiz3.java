@@ -8,7 +8,7 @@ public class Quiz3 {
 
         int score = sc.nextInt();
 
-        String result = score >= 60 ? "패스" : "재수강";
+        String result = (score >= 60) ? "패스" : "재수강";
         System.out.println(result);
 
         sc.close();
