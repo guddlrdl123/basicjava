@@ -19,18 +19,16 @@ public class WhileEx2 {
          * scanner.close();
          */
         int i = 2;
-        int j = 1;
-        while (i <= 9) {
 
+        while (i <= 9) {
+            int j = 1;
             while (j <= 9) {
                 System.out.printf("%d x %d = %d\n", i, j, (i * j));
                 j++;
-
                 if (j == 9) {
 
                     continue;
                 }
-
             }
             i++;
 
