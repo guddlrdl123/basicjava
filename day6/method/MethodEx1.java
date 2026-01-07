@@ -12,6 +12,6 @@ public class MethodEx1 {
     // 메서드 선언 및 정의
     // 파라미터 리스트는 여러 개를 선언할 수 있음.
     public static int sum(int a, int b) {
-        return a + b;
+        return a + b; // 1)반환값 처리, 2)함수의 종료(* void)
     }
 }
