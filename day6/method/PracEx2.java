@@ -36,24 +36,48 @@ public class PracEx2 {
             menu = menu.toLowerCase();
 
             switch (menu.charAt(0)) {
+
                 case 'i':
                     insertCustomerData();
                     break;
+
                 case 'p':
-                    previousPrintCustomerData();
+                    System.out.println("이전 데이터를 출력합니다.");
+                    if (index <= 0) {
+                        System.out.println("이전 데이터가 존재하지 않습니다.");
+                    } else {
+                        index--;
+                        printCustomerData();
+                    }
                     break;
+
                 case 'n':
-                    nextPrintCustomerData();
+                    System.out.println("다음 데이터를 출력합니다.");
+                    if (index >= count - 1) {
+                        System.out.println("다음 데이터가 존재하지 않습니다.");
+                    } else {
+                        index++;
+                        printCustomerData();
+                    }
                     break;
+
                 case 'c':
-                    currentPrintCustomerData();
+                    System.out.println("현재 데이터를 출력합니다.");
+                    if ((index >= 0) && (index < count)) {
+                        printCustomerData();
+                    } else {
+                        System.out.println("출력할 데이터가 선택되지 않았습니다.");
+                    }
                     break;
+
                 case 'u':
                     updateCustomerData();
                     break;
+
                 case 'd':
                     deleteCustomerData();
                     break;
+
                 case 'q':
                     System.out.println("프로그램을 종료합니다.");
                     sc.close();
@@ -94,52 +118,68 @@ public class PracEx2 {
         }
     }
 
-    // 이전 데이터 출력
-    public static void previousPrintCustomerData() {
-        System.out.println("이전 데이터를 출력합니다.");
-        if (index <= 0) {
-            System.out.println("이전 데이터가 존재하지 않습니다.");
-        } else {
-            index++;
-            System.out.println("=============== Previous Info ===============");
-            System.out.println("이름 : " + nameList[index]);
-            System.out.println("성별 : " + genderList[index]);
-            System.out.println("이메일 : " + emailList[index]);
-            System.out.println("출생년도 : " + birthYearList[index]);
-            System.out.println("=========================================");
-        }
+    public static void printCustomerData() {
+        System.out.println("================== Info ==================");
+        System.out.println("이름 : " + nameList[index]);
+        System.out.println("성별 : " + genderList[index]);
+        System.out.println("이메일 : " + emailList[index]);
+        System.out.println("출생년도 : " + birthYearList[index]);
+        System.out.println("==========================================");
+
     }
+
+    // 이전 데이터 출력
+    /*
+     * public static void previousPrintCustomerData() {
+     * System.out.println("이전 데이터를 출력합니다.");
+     * if (index <= 0) {
+     * System.out.println("이전 데이터가 존재하지 않습니다.");
+     * } else {
+     * index++;
+     * System.out.println("=============== Previous Info ===============");
+     * System.out.println("이름 : " + nameList[index]);
+     * System.out.println("성별 : " + genderList[index]);
+     * System.out.println("이메일 : " + emailList[index]);
+     * System.out.println("출생년도 : " + birthYearList[index]);
+     * System.out.println("=========================================");
+     * }
+     * }
+     */
 
     // 다음 데이터 출력
-    public static void nextPrintCustomerData() {
-        System.out.println("다음 데이터를 출력합니다.");
-        if (index >= count - 1) {
-            System.out.println("다음 데이터가 존재하지 않습니다.");
-        } else {
-            index--;
-            System.out.println("=============== Next Info ===============");
-            System.out.println("이름 : " + nameList[index]);
-            System.out.println("성별 : " + genderList[index]);
-            System.out.println("이메일 : " + emailList[index]);
-            System.out.println("출생년도 : " + birthYearList[index]);
-            System.out.println("=========================================");
-        }
-    }
+    /*
+     * public static void nextPrintCustomerData() {
+     * System.out.println("다음 데이터를 출력합니다.");
+     * if (index >= count - 1) {
+     * System.out.println("다음 데이터가 존재하지 않습니다.");
+     * } else {
+     * index--;
+     * System.out.println("=============== Next Info ===============");
+     * System.out.println("이름 : " + nameList[index]);
+     * System.out.println("성별 : " + genderList[index]);
+     * System.out.println("이메일 : " + emailList[index]);
+     * System.out.println("출생년도 : " + birthYearList[index]);
+     * System.out.println("=========================================");
+     * }
+     * }
+     */
 
     // 현재 데이터 출력
-    public static void currentPrintCustomerData() {
-        System.out.println("현재 데이터를 출력합니다.");
-        if ((index >= 0) && (index < count)) {
-            System.out.println("=============== Current Info ===============");
-            System.out.println("이름 : " + nameList[index]);
-            System.out.println("성별 : " + genderList[index]);
-            System.out.println("이메일 : " + emailList[index]);
-            System.out.println("출생년도 : " + birthYearList[index]);
-            System.out.println("=========================================");
-        } else {
-            System.out.println("출력할 데이터가 선택되지 않았습니다.");
-        }
-    }
+    /*
+     * public static void currentPrintCustomerData() {
+     * System.out.println("현재 데이터를 출력합니다.");
+     * if ((index >= 0) && (index < count)) {
+     * System.out.println("=============== Current Info ===============");
+     * System.out.println("이름 : " + nameList[index]);
+     * System.out.println("성별 : " + genderList[index]);
+     * System.out.println("이메일 : " + emailList[index]);
+     * System.out.println("출생년도 : " + birthYearList[index]);
+     * System.out.println("=========================================");
+     * } else {
+     * System.out.println("출력할 데이터가 선택되지 않았습니다.");
+     * }
+     * }
+     */
 
     // 데이터 수정
     public static void updateCustomerData() {

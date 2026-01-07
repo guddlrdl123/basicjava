@@ -65,7 +65,7 @@ public class CustomerManagerBasic {
                     if (index <= 0) {
                         System.out.println("이전 데이터가 존재하지 않습니다.");
                     } else {
-                        index++;
+                        index--;
                         System.out.println("=============== Previous Info ===============");
                         System.out.println("이름 : " + nameList[index]);
                         System.out.println("성별 : " + genderList[index]);
@@ -80,7 +80,7 @@ public class CustomerManagerBasic {
                     if (index >= count - 1) {
                         System.out.println("다음 데이터가 존재하지 않습니다.");
                     } else {
-                        index--;
+                        index++;
                         System.out.println("=============== Next Info ===============");
                         System.out.println("이름 : " + nameList[index]);
                         System.out.println("성별 : " + genderList[index]);
