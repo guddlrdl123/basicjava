@@ -24,4 +24,10 @@ public class Student extends Person {
         System.out.println(name + "학생은 공부를 합니다.");
     }
 
+    @Override
+    public String getInfo() {
+        return String.format("%s\n당신의 학번은 %s이고, 학과는 %s 입니다.", super.getInfo(), studentId, subject);
+
+    }
+
 }

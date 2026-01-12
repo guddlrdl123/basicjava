@@ -28,5 +28,13 @@ public class ClassEx7 {
         teacher.doWork();
         student.doWork();
 
+        // student의 getInfo() 호출
+        System.out.println("person의 getInfo() 결과\n" + person.getInfo());
+        System.out.println("student의 getInfo() 결과\n" + student.getInfo());
+
+        // 연습 테스트
+        System.out.println("employee의 getInfo() : " + employee.getInfo());
+        employee.doWork();
+
     }
 }
