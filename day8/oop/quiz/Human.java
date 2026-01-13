@@ -9,8 +9,9 @@ public class Human {
         this.age = age;
     }
 
-    public void getInfo() {
-        System.out.printf("이름 : %s, 나이 : %d\n", name, age);
+    @Override
+    public String toString() {
+        return "[name=" + name + ", age=" + age + "]";
     }
 
 }
@@ -24,9 +25,11 @@ class Student extends Human {
         this.subject = subject;
     }
 
-    public void getInfo() {
-        System.out.printf("이름 : %s, 나이 : %d, 학과 : %s\n", name, age, subject);
+    @Override
+    public String toString() {
+        return "[name=" + name + ", age=" + age + ", subject=" + subject + "]";
     }
+
 }
 
 class Teacher extends Human {
@@ -37,9 +40,11 @@ class Teacher extends Human {
         this.subject = subject;
     }
 
-    public void getInfo() {
-        System.out.printf("이름 : %s, 나이 : %d, 교과목 : %s\n", name, age, subject);
+    @Override
+    public String toString() {
+        return "[name=" + name + ", age=" + age + ", subject=" + subject + "]";
     }
+
 }
 
 class Employee extends Human {
@@ -50,7 +55,9 @@ class Employee extends Human {
         this.department = department;
     }
 
-    public void getInfo() {
-        System.out.printf("이름 : %s, 나이 : %d, 부서 : %s\n", name, age, department);
+    @Override
+    public String toString() {
+        return "[name=" + name + ", age=" + age + ", department=" + department + "]";
     }
+
 }

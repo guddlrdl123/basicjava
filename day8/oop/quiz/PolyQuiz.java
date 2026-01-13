@@ -34,7 +34,7 @@ public class PolyQuiz {
         }
 
         System.out.println(className);
-        System.out.println();
+        System.out.println(human);
 
     }
 }
