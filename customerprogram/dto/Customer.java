@@ -6,17 +6,15 @@ public class Customer {
     private char gender;
     private String email;
     private int birthYear;
-    private String rank;
 
     public Customer() {
     }
 
-    public Customer(String name, char gender, String email, int birthYear, String rank) {
+    public Customer(String name, char gender, String email, int birthYear) {
         this.name = name;
         this.gender = gender;
         this.email = email;
         this.birthYear = birthYear;
-        this.rank = rank;
     }
 
     public String getName() {
@@ -51,18 +49,10 @@ public class Customer {
         this.birthYear = birthYear;
     }
 
-    public String getRank() {
-        return rank;
-    }
-
-    public void setRank(String rank) {
-        this.rank = rank;
-    }
-
     @Override
     public String toString() {
         return "Customer [name=" + name + ", gender=" + gender + ", email=" + email + ", birthYear=" + birthYear
-                + ", rank=" + rank + "]";
+                + "]";
     }
 }
 /*
